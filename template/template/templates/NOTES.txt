@@ -1,0 +1,9 @@
+Name: {{ .Release.Name }}
+Namespace: {{ .Release.Namespace }}
+Revision: {{ .Release.Revision }}
+
+ReplicaCount: {{ .Values.replicaCount }}
+ImageName: {{ .Values.image.repository }}
+
+ChartName: {{ .Chart.Name }}
+Chart Version: {{ .Chart.Version }}
