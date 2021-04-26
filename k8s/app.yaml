@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: app
+  name: goweb-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: app
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: app
+    spec:
+      containers:
+      - env:
+        - name: DB_URL
+          value: mysql-svc
+        - name: DB_PORT
+          value: "3306"
+        - name: DB_USER
+          value: root
+        - name: DB_PASSWORD
+          value: password
+        image: opstree/ot-go-webapp:v1
+        name: goweb-app
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP

@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    app.kubernetes.io/name: app
+  name: goweb-app
+spec:
+  rules:
+  - host: sandy.opstree.com
+    http:
+      paths:
+      - backend:
+          serviceName: goweb-app
+          servicePort: 8080
+        path: /
+        pathType: ImplementationSpecific
