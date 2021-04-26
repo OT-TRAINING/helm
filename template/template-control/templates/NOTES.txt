@@ -1,0 +1,21 @@
+Validation for default
+{{ if eq .Values.source "default" }}
+Source is default
+{{ end }}
+Validation for parameter
+{{- if eq .Values.source "parameter" }}
+Source is parameter
+{{- end }}
+Validation for File
+{{ if eq .Values.source "file" }}
+Source is file
+{{ end }}
+
+Hello Direct {{ .Values.name.firstName | lower }} {{ .Values.name.lastName }}
+{{- with .Values.name }}
+Hello With {{ .firstName | upper }} {{ .lastName }}
+{{- end }}
+
+{{- range .Values.names }}
+Hi {{ .firstName | upper }} {{ .lastName }}
+{{- end }}

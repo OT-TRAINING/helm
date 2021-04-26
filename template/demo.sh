@@ -3,9 +3,9 @@ function templatesWithFile() {
 }
 
 function templatesWithArgument() {
-	helm install sandy template --dry-run --set replicatCount=4
+	helm install sandy template --dry-run --set replicaCount=4
 }
 
-function tempates() {
+function templates() {
 	helm install sandy template --dry-run
 }

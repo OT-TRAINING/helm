@@ -1,10 +1,21 @@
-# Default values for template.
+# Default values for template-control.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 source: "default"
-
+name:
+  firstName: sAnDeEp
+  lastName: RaWaT
+names:
+  - firstName: sandeep
+    lastName: rawat
+  - firstName: Abhishek
+    lastName: Dubey
+  - firstName: Deepak
+    lastName: Gupta
+  - firstName: Mehul
+    lastName: Sharma
 image:
   repository: nginx
   pullPolicy: IfNotPresent

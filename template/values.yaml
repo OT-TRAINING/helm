@@ -1,3 +1,15 @@
 replicaCount: 5
+source: "file"
+names:
+  - firstName: shankar
+    lastName: jha
+  - firstName: Yogesh
+    lastName: Batish
+  - firstName: Sajal
+    lastName: Jain
+  - firstName: Alok
+    lastName: Upadhyay
+  - firstName: Ankur
+    lastName: Verma
 image:
   repository: "customImage" 

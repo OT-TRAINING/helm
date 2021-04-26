@@ -7,3 +7,4 @@ ImageName: {{ .Values.image.repository }}
 
 ChartName: {{ .Chart.Name }}
 Chart Version: {{ .Chart.Version }}
+
